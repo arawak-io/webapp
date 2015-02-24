@@ -53,7 +53,7 @@ node_modules/
 # --------------------
 # Bower Files
 # --------------------
-.bower-*/
+#.bower-*/
 bower_components
 
 # --------------------
