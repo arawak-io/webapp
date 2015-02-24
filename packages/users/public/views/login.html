@@ -4,7 +4,7 @@
 
     <h2>Login</h2>
 
-    <form id="login_form" ng-submit="login()">
+    <!--<form id="login_form" ng-submit="login()">
         <div class="input-wrapper">
             <input required id="email_block" type="email" name="email" placeholder="Email Address" ng-model="user.email">
             <div class="error_message">Please enter a correct info #</div>
@@ -30,5 +30,45 @@
         <div class="woman_ninja_bottom">
             <img src="/theme/assets/img/woman_ninja.png" alt="#">
         </div>
-    </form>
+    </form>-->
+
+
+    <div class="mt++" flex-container="row" flex-gutter="24">
+    <div flex-item>
+        <form id="login_form" ng-submit="login()">
+
+            <lx-text-field label="Email Address" fixed-label="true" icon="email">
+                <input required type="email" ng-model="user.email">
+            </lx-text-field>
+
+            <lx-text-field label="Password" fixed-label="true" icon="lock">
+                <input required id="password_block" name="password" type="{{input.type}}" ng-model="user.password">
+            </lx-text-field>
+
+            <!--<span class="pic password {{input.iconClass}}" ng-click = "togglePasswordVisible()">
+                      <div class="hide_text_password">
+                          {{input.tooltipText}}
+                      </div>
+            </span>-->
+
+            
+
+
+<button type="submit" class="btn btn--m btn--blue btn--raised" lx-ripple>Login</button>
+
+<br />                     
+<button class="btn btn--m btn--blue btn--flat" lx-ripple><a ui-sref='auth.register' >Create an account</a></button>
+     
+</form>
+
+<span><a ui-sref='forgot-password'>Forgot your password?</a></span>
 </div>
+
+
+
+
+
+</div>
+
+
+
